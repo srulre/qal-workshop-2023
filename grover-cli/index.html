@@ -546,8 +546,11 @@ constraints.</p>
 <p>The CLI syntax is given as follows:</p>
 <ol>
 <li><code>oracle</code> - required: an arithmetic oracle expression and the 
-   variable declarations. <ul>
-<li>Example: <code>--oracle "a + b == 11 and (a - b == 1 or b - a == 1)" a 3 b 3</code>. </li>
+   variable declarations.<ul>
+<li>For the list of supported arithmetic operators, see Classiq 
+   documentation on <a href="https://docs.classiq.io/latest/user-guide/function-library/builtin-functions/arithmetic/arithmetic-expression/">arithmetic expressions</a>.</li>
+<li>Example: <code>--oracle "a + b == 11 and (a - b == 1 or b - a == 1)" a 3 b 3</code>.</li>
+<li>Note: currently, the variables are unsigned integers only.</li>
 </ul>
 </li>
 <li><code>iterations</code> - the number of Grover iterations. Default: <code>1</code>.</li>
@@ -582,8 +585,7 @@ folder, run <code>./build/grover_cli --oracle ORACLE [optional args]</code>.</p>
 <h2 id="suggested-exercises">Suggested Exercises<a class="headerlink" href="#suggested-exercises" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Try sampling different oracles - vary the arithmetic 
-   expressions, variable sizes, and the number of variables.
-    - Note: currently, the variables are unsigned integers only.</li>
+   expressions, variable sizes, and the number of variables.</li>
 <li>Try spotting the diffuser and isolating the block that belongs 
    to the multi-controlled Z operation (currently, it's not marked 
    explicitly, but it will be in the future).</li>
