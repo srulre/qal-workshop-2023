@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "qal-workshop-october-2023"
+version = "0.0.0"
+description = "QAL Workshop October 2023"
+authors = ["Classiq Technologies <support@classiq.io>"]
+license = "Proprietary"
+repository = "https://https://github.com/Classiq-Technologies/classiq-cudaq"
+
+[tool.poetry.dependencies]
+python = ">=3.11, <3.12"
+mkdocs = "^1.4.3"
+mkdocs-material = "^9.1.15"
+mkdocs-simple-hooks = "<1, >= 0.1.5"
+mkdocs-macros-plugin = ">=0.7.0,<2"
+mkdocs-click = "<1, >= 0.8.0"
+mdx-truly-sane-lists = "= 1.3"
+typing-extensions = ">=4.1.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

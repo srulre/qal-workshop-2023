@@ -1,0 +1,86 @@
+site_name: QAL Workshop October 2023
+site_url: https://srulre.github.io/qal-workshop-oct-2023/ # noqa: link
+use_directory_urls: true
+site_description: Hands-on Materials for QAL Workshop October 2023
+site_author: &classiq Classiq Technologies
+copyright: *classiq
+strict: true
+
+theme:
+  name: material
+  custom_dir: docs/overrides # for HubSpot integration
+  favicon: resources/images/ClassiqFavicon.png
+  logo: resources/images/classiq-logo.svg
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      primary: black
+      scheme: slate
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.indexes
+    - navigation.instant
+    - navigation.footer
+    - content.tabs.link
+    - content.code.copy
+    - search.highlight
+  icon:
+    admonition:
+      note: octicons/tag-16
+  font:
+    text: Lato
+    code: Roboto Mono
+
+extra_css:
+  - css/colors.css
+  - css/page_format.css
+
+extra_javascript:
+  - javascripts/links_in_newtab.js
+  - javascripts/mathjax.js
+  - javascripts/gtm.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/fix_dark_mode_toggle_leftovers.js # This script can be removed, in 3 months from now (starting 1.12.23)
+
+nav:
+  - QAL Workshop October 2023:
+      - index.md
+      - Setup: setup.md
+      - Introduction: introduction.md
+      - Example - Grover's Algorithm: grover-example.md
+      - Hands-on - Grover's Algorithm with CLI: grover-cli.md
+
+markdown_extensions:
+  - attr_list
+  - mdx_truly_sane_lists
+  - admonition
+  - mkdocs-click
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.critic
+  - pymdownx.smartsymbols
+  - pymdownx.keys
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - footnotes
+  - toc:
+      title: On this page
+      permalink: True
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+  - pymdownx.striphtml:
+      strip_comments: true
+
+plugins:
+  - search
+  - macros
+  - mkdocs-simple-hooks:
+      hooks:
+        on_config: "docs.hooks.navigation:validate_navigation"

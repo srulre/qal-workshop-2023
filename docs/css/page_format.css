@@ -1,0 +1,27 @@
+/* stretch the navigation menu  */
+
+.md-sidebar--primary {
+  width: auto;
+  max-width: 14em;
+  min-width: 13em; /* set the width to the minimum necessary for the current menu.
+                       change that field to set a minimum width regardless of the current menu */
+}
+.md-sidebar--scrollwrap {
+  width: auto;
+  max-width: 14em;
+}
+/* Don't display the default Material Mkdocs header title
+(which uses config.site_name property), since we use the classiq-logo.svg instead.
+*/
+.md-header__topic {
+  display: none;
+}
+
+/* hide jupyter notebooks input/output numbers */
+.jp-InputPrompt {
+  display: none !important;
+}
+
+.jp-OutputPrompt {
+  display: none !important;
+}
