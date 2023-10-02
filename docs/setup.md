@@ -1,6 +1,6 @@
 # Setup
 
-Please perform the following steps below before the workshop:
+Please perform the steps below:
 
 ## Registration to Classiq Platform
 

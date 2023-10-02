@@ -12,8 +12,11 @@ constraints.
 The CLI syntax is given as follows:
 
 1. `oracle` - required: an arithmetic oracle expression and the 
-   variable declarations. 
-   - Example: `--oracle "a + b == 11 and (a - b == 1 or b - a == 1)" a 3 b 3`. 
+   variable declarations.
+   - For the list of supported arithmetic operators, see Classiq 
+     documentation on [arithmetic expressions](https://docs.classiq.io/latest/user-guide/function-library/builtin-functions/arithmetic/arithmetic-expression/).
+   - Example: `--oracle "a + b == 11 and (a - b == 1 or b - a == 1)" a 3 b 3`.
+   - Note: currently, the variables are unsigned integers only.
 2. `iterations` - the number of Grover iterations. Default: `1`.
 3. `optimization-parameter` - a quantitative parameter provided 
    to the synthesis engine to optimize the circuit by. Can get the 
@@ -45,7 +48,6 @@ folder, run `./build/grover_cli --oracle ORACLE [optional args]`.
 
 1. Try sampling different oracles - vary the arithmetic 
    expressions, variable sizes, and the number of variables.
-    - Note: currently, the variables are unsigned integers only.
 2. Try spotting the diffuser and isolating the block that belongs 
    to the multi-controlled Z operation (currently, it's not marked 
    explicitly, but it will be in the future).
