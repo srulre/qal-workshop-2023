@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://srulre.github.io/qal-workshop-oct-2023/</loc>
+         <lastmod>2023-10-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://srulre.github.io/qal-workshop-oct-2023/grover-cli/</loc>
+         <lastmod>2023-10-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://srulre.github.io/qal-workshop-oct-2023/grover-example/</loc>
+         <lastmod>2023-10-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://srulre.github.io/qal-workshop-oct-2023/introduction/</loc>
+         <lastmod>2023-10-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://srulre.github.io/qal-workshop-oct-2023/prerequisites/</loc>
+         <lastmod>2023-10-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://srulre.github.io/qal-workshop-oct-2023/setup/</loc>
+         <lastmod>2023-10-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+</urlset>

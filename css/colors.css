@@ -1,0 +1,223 @@
+/* use image for color theme */
+:root {
+  --classiqPink: #f43764;
+  --classiqGray: #c9cbc0;
+  --classiqGreen: #d7f75b;
+  --classiqTorquise: #119da4;
+}
+
+body,
+.md-header {
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.md-header__topic {
+  font-family: "PT Sans", sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: -0.67px;
+  color: #f4f9e9;
+}
+
+.md-tabs {
+  background-size: cover;
+  background-attachment: fixed;
+}
+.md-footer {
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: black;
+}
+.md-container,
+.md-search__inner {
+  background-color: rgba(255, 255, 255 0.9);
+}
+.md-footer-nav,
+.md-footer-meta {
+  background: transparent;
+}
+
+/* General style */
+.md-typeset h1 {
+  font-family: "PT Sans", sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: var(--classiqPink);
+  letter-spacing: -0.89px;
+}
+.md-typeset h2 {
+  font-family: "PT Sans", sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: var(--classiqPink);
+  letter-spacing: -0.67px;
+}
+
+.md-typeset h3 {
+  font-family: "PT Sans", sans-serif;
+  color: var(--classiqPink);
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: -0.53px;
+}
+
+.md-typeset p {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  letter-spacing: -0.4px;
+}
+
+.md-typeset code {
+  font-size: 16px;
+  letter-spacing: -0.4px;
+}
+
+.md-tabs,
+.md-header-nav__topic,
+.md-sidebar {
+  font-family: "lato", sans-serif;
+  font-size: 18px;
+}
+.md-tabs a {
+  font-size: 1rem;
+}
+.md-sidebar label {
+  font-size: 18px;
+}
+.md-sidebar a {
+  font-size: 16px;
+  margin-top: 0.4em;
+}
+
+.md-typeset__table th {
+  border-bottom: 2px solid var(--classiqPink);
+  font-weight: bold;
+  font-size: 18px;
+}
+.md-typeset__table tr:nth-child(even) {
+  background: rgba(255, 255, 255 0.9);
+}
+.md-typeset table:not([class]) tr:nth-child(even):hover {
+  background-color: rgba(61, 61, 76, 0.035);
+}
+
+/* change link colors for grey theme */
+.md-header-nav__button:hover {
+  opacity: 1;
+  color: var(--classiqTorquise);
+  transition: color 0.5s;
+}
+[data-md-color-primary="grey"] .md-typeset a {
+  /* color: #00ade2; */
+  color: var(--classiqGreen);
+}
+[data-md-color-primary="grey"] .md-typeset a:hover {
+  color: var(--classiqPink);
+}
+.md-nav__item .md-nav__link--active {
+  color: var(--classiqPink);
+}
+.md-sidebar label,
+.md-nav__item--nested > .md-nav__link,
+.md-sidebar a {
+  color: gray;
+}
+.md-nav__link:hover {
+  color: var(--classiqTorquise);
+}
+.md-nav__link[data-md-state="blur"] {
+  color: rgb(180, 180, 180);
+}
+.md-nav__item .md-nav__link--active {
+  color: var(--classiqPink);
+}
+
+.md-footer-nav__link {
+  font-weight: bold;
+}
+.md-footer-nav__link:hover {
+  opacity: 1;
+  color: var(--classiqTorquise);
+  transition: color 0.5s;
+}
+a.headerlink {
+  color: gray;
+}
+
+/* display external links with icon */
+div.md-content a[href^="http://"]:not([href*="alinex.gitlab.io"]):after,
+div.md-content a[href^="https://"]:not([href*="alinex.gitlab.io"]):after,
+div.md-content a[href^="//"]:not([href*="alinex.gitlab.io"])
+{
+  content: "↗";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 70%;
+  vertical-align: top;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* attribute classes to be used via {: .class} */
+.left {
+  /* left align with text float on the right */
+  float: left;
+  padding-right: 20px;
+}
+.right {
+  /* right align with text float on the left */
+  float: right;
+  padding-left: 20px;
+}
+.icon {
+  /* change image size */
+  width: 25%;
+}
+.border {
+  /* add drop shadow */
+  border: 1px solid #021a40;
+  -webkit-box-shadow: 0px 0px 18px 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 18px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 18px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* special use tags ==...== */
+mark,
+.md-typeset mark {
+  background-color: rgb(255, 253, 130);
+  color: black;
+  font-weight: bold;
+}
+
+/* blockdiag */
+img[src*="%3Ctitle%3Eblockdiag%3C"] {
+  background-color: lightgray;
+}
+
+/* image zoom */
+img {
+  height: auto;
+  width: auto;
+}
+.zoom,
+.zoom2 {
+  transition: transform ease-in-out 0.5s;
+  cursor: zoom-in;
+}
+.image-zoom {
+  background: #000;
+  transform: scale(1);
+  cursor: zoom-out;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 100;
+  position: absolute;
+}
+.image-zoom2 {
+  background: #000;
+  transform: scale(1.5);
+  cursor: zoom-out;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 100;
+  position: absolute;
+}
