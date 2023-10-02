@@ -8,19 +8,26 @@ Please perform the following steps below before the workshop:
 
 ## Visual Studio Code and Extensions
 
-0. Make sure to have Python installed.
+1. Make sure to have Python installed.
+2. Install [Visual Studio Code](https://code.visualstudio.com) and 
+   open a new window.
+
+### Setting up the SSH Connection:
 
 1. Download the Python script [setup_remote.py](resources/setup/setup_remote.py){:download="setup_remote.py"}
-2. Run `setup_remote.py gpu-name user-name`, the last two fields 
-   will be provided at the workshop.
+2. In the terminal, run `setup_remote.py gpu-name user-name`, the 
+   last two fields will be provided at the workshop.
+3. Install Remote Development Extension Pack (see image below).
 
-1. Install [Visual Studio Code](https://code.visualstudio.com) and 
-   open a new window.
-2. Install Remote Development Extension Pack (see image below).
-3. Press Ctrl+Shift+P (or CMD+Shift+P in Mac) and 
+### Connecting:
+
+1. Press Ctrl+Shift+P (or CMD+Shift+P in Mac) and 
    choose `Remote-SSH: Connect to Host…`.
-4. Choose `qal-workshop~host`.
-5. Install the following extensions : C/C++ Extension Pack and CMake 
+2. Choose `qal-workshop~host`.
+
+### Finalizing:
+
+1. Install the following extensions : C/C++ Extension Pack and CMake 
    Tools.
 
 ![Remote Development Extension Pack](resources/setup/remote-development-extension-pack.png)
