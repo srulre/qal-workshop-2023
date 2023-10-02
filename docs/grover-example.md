@@ -1,7 +1,7 @@
 # First Example - Grover
 
-For a Grover example in Cuda Quantum, see 
-[Cuda Quantum documentation](https://nvidia.github.io/cuda-quantum/latest/specification/cudaq/examples.html#grover-s-algorithm).
+For a Grover example in CUDA Quantum, see 
+[CUDA Quantum documentation](https://nvidia.github.io/cuda-quantum/latest/specification/cudaq/examples.html#grover-s-algorithm).
 
 The first part focuses on constructing a simple example of 
 Grover's algorithm with an arithmetic oracle. Here, the goal is 

@@ -1,6 +1,4 @@
-# Getting Started
-
-Welcome to the QAL Workshop!
+Welcome to the QAL Workshop October 2023!
 
 ## Contents
 

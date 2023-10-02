@@ -1,12 +1,12 @@
 # Introduction
 
-The workshop will present the integration between Cuda Quantum and 
+The workshop will present the integration between CUDA Quantum and 
 Classiq.
 
-1. Program with Classiq (in a fashion of Cuda Quantum)
+1. Program with Classiq (in a fashion of CUDA Quantum)
 2. Synthesize the circuit with Classiq
-3. Output a Cuda Quantum kernel
-4. Execute the kernel in Cuda Quantum
+3. Output a CUDA Quantum kernel
+4. Execute the kernel in CUDA Quantum
 5. Visualize the kernel using Classiq
 
 The end goal - a uniform framework where users program in Cuda 
@@ -17,10 +17,9 @@ Quantum and benefit from Classiq's enhancements:
 - Releasing and reallocating qubits
 - Selecting between equivalent implementations
 
-The framework will combine the Cuda Quantum programming model, 
+The framework will combine the CUDA Quantum programming model, 
 compilation, and execution with Classiq library, synthesis, and 
-visualization: Step 1 will be replaced by programming with Cuda 
-Quantum.
+visualization.
 
 Therefore, the workshop will focus on Classiq's library, synthesis 
 and visualization and less on the programming. 
