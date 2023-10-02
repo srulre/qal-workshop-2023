@@ -184,4 +184,7 @@ counts.dump();
 classiq::visualize(kernel);
 ```
 
-## Add instructions to run the code
+## Running the Code
+
+In the Visual Studio Code terminal, inside the `qal_workshop` 
+folder, run `./build/grover_example`.

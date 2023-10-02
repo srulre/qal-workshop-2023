@@ -28,23 +28,19 @@ Please perform the following steps below before the workshop:
 
 ## Workshop Files
 
-1. In your project, open a folder named `qal-workshop`.
-2. Download the following files. **Keep the folder structure as 
-   shown**.
-
-qal-workshop  
-├─[CMakeLists.txt](resources/qal_workshop/CMakeLists.txt){:download="CMakeLists.txt"}  
-├─include  
-│ ├─[grover_cli_tools.hpp](resources/qal_workshop/include/grover_cli_tools.hpp){:download="grover_cli_tools.hpp"}  
-├─src  
-│ ├─[grover_cli_tools.cpp](resources/qal_workshop/src/grover_cli_tools.cpp){:download="grover_cli_tools.cpp"}  
-│ ├─[grover_example.cpp](resources/qal_workshop/src/grover_example.cpp){:download="grover_example.cpp"}  
-│ ├─[grover_cli.cpp](resources/qal_workshop/src/grover_cli.cpp){:download="grover_cli.cpp"}  
+1. In the Visual Studio Code window, open a terminal.
+2. Create a folder named `qal_workshop` (e.g., by `mkdir qal_workshop`).
+3. Copy the files from the JHS Notebooks to the new folder: `cp -r ~/JHS_notebooks/qal_workshop ~/qal_workshop`.
 
 
 ## Building the Project
 
 1. Press Ctrl+Shift+P (CMD+Shift+P) and choose `CMake: 
-   Configure`
+   Configure`.
 2. Press Ctrl+Shift+P (CMD+Shift+P) and choose `CMake: 
-   Build`
+   Build`.
+
+## Authentication
+
+To connect to the Classiq backend, run the authentication script 
+by executing the following command from the terminal: `JHS_notebooks/generate_access_token_for_cudaq`.

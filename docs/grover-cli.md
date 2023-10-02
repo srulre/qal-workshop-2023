@@ -36,6 +36,11 @@ The CLI syntax is given as follows:
    width**.
 6. `visualize-circuit` - a flag that gets `true` (default) or `false`.
 
+## Running the Code
+
+In the Visual Studio Code terminal, inside the `qal_workshop` 
+folder, run `./build/grover_cli --oracle ORACLE [optional args]`.
+
 ## Suggested Exercises
 
 1. Try sampling different oracles - vary the arithmetic 
