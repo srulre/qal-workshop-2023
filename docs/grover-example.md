@@ -5,7 +5,7 @@ For a Grover example in CUDA Quantum, see
 
 The first part focuses on constructing a simple example of 
 Grover's algorithm with an arithmetic oracle. Here, the goal is 
-to present Classiq's built-in library and show kernel 
+to present Classiq's built-in library and show CUDA kernel 
 visualization. 
 
 The next session will discuss constraints in detail.
@@ -22,16 +22,24 @@ Before we run the example, let's break down its different parts.
 
 ## The Oracle
 
-The oracle performs the transformation
+A computational basis oracle performs the transformation
 
 \[
-\sum_{x=\left\{0,1\right\}^{n}}\psi_{x}\left|x\right> \rightarrow
+\left|\psi\right> = \sum_{x=\left\{0,1\right\}^{n}}\psi_{x}
+\left|x\right> \rightarrow
 \sum_{x=\left\{0,1\right\}^{n}}\psi_{x}\left(-1\right)^{f\left(x\right)}
 \left|x\right>
 \]
 
-Where, usually, the coefficients $\psi_{x}$ are uniform, so $\psi_
-{x} = \frac{1}{\sqrt{2^{n}}$.
+In the canonical Grover algorithm, the coefficients $\psi_{x}$ are 
+uniform, so
+
+
+\[ 
+\left|\psi\right> = \frac{1}{\sqrt{2^{n}}}\sum_
+{x=\left\{0,1\right\}^{n}}\left|x\right>,
+\] 
+
 
 Here, we use an arithmetic oracle, so $f\left(x\right) = 1$ for 
 $x$ that satisfies some arithmetic condition. 
@@ -51,24 +59,22 @@ as arguments.
    );
 ```
 
-## The Diffuser (Second Reflection)
+## The Diffuser
 
 The Grover's diffuser "reflects" around a chosen quantum state 
-$\left|\psi\right>$, 
-usually the uniform superposition state, 
-
-\[ 
-\left|\psi\right> = \frac{1}{\sqrt{2^{n}}}\sum_
-{x=\left\{0,1\right\}^{n}}\left|x\right>,
-\] 
-
-initialized by applying 
-Hadamard gates on all qubits by applying the transformation 
+$\left|\psi\right>$, by applying the operator
 $2\left|\psi\right>\left<\psi\right| - \mathbf{I}$.
 
 ### The State Preparation
 
-In this code, let's focus on the last line: it shows the internal 
+The state preparation is a unitary operator that performs the 
+transformation $\left|0\right> \rightarrow \left|\psi\right>$.
+
+Here, we show the canonical example, where the uniform 
+superposition state is obtained by applying Hadamard gates on all 
+qubits.
+
+In this code, let's focus on the last line: it shows the internal
 Classiq's `apply_to_all` construct.
 
 ```cpp
@@ -107,8 +113,17 @@ The main focus here is on the last three statements.
               classiq::operand<"state_preparation", classiq::qreg<"target">> state_preparation
           )
           {
-              classiq::invert(diffuser_qreg, [&](classiq::qreg<"target"> q) { compute_block(q, state_preparation); });
-              classiq::control(diffuser_qreg.back(), diffuser_qreg.front(diffuser_qreg.size() - 1), classiq::z);
+              classiq::invert(
+                  diffuser_qreg, 
+                  [&](classiq::qreg<"target"> q) { 
+                     compute_block(q, state_preparation); 
+                  }
+              );
+              classiq::control(
+                  diffuser_qreg.back(), 
+                  diffuser_qreg.front(diffuser_qreg.size() - 1), 
+                  classiq::z
+              );
               compute_block(diffuser_qreg, state_preparation);
           }
     );
