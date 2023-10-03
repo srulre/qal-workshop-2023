@@ -7,12 +7,13 @@ import json
 import random
 import string
 import shutil
+from typing import List
 
 
 gpu_host = "qal-workshop~host"
 
 
-def parse_ssh_config(config: str) -> list[str]:
+def parse_ssh_config(config: str) -> List[str]:
     ret = []
 
     for line in config.splitlines():
@@ -105,11 +106,14 @@ def add_vscode_settings() -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description='Setup ssh-config file for QAL workshop')
     
-    parser.add_argument("gpu_host_name", help="The hostname of the GPU server")
+    ssh_config_dir = Path.home() / ".ssh"
+    ssh_config_dir.mkdir(exist_ok=True)
+
     parser.add_argument("user", help="The username in the remote server of the participant")
+    parser.add_argument("gpu_host_name", nargs='?', default="gcn55", help="The hostname of the GPU server")
     parser.add_argument("teacher_dir", nargs='?', default=Path("/projects") / "0" / "jhssrf003", type=Path, help="The path of the teacher directory (saved in TEACHER_DIR)")
     parser.add_argument("jump_host_name", nargs='?', help="The hostname of the login server", default="snellius.surf.nl")
-    parser.add_argument("config_path", nargs='?', default=Path.home() / ".ssh" / "config", type=Path, help="Path to local ssh_config file")
+    parser.add_argument("config_path", nargs='?', default=ssh_config_dir / "config", type=Path, help="Path to local ssh_config file")
 
     args = parser.parse_args()
 
