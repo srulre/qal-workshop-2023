@@ -41,7 +41,7 @@ Host {jump_host}
 
     apptainer_image_config = f"""
 Host {apptainer_image_host}
-  RemoteCommand kill -9 $(pgrep -U $UID -f vscode | grep -v  ^$$\$); apptainer shell --nv --no-mount hostfs --writable-tmpfs {qal_workshop_image_path}
+  RemoteCommand kill -9 $(pgrep -U $UID -f vscode | grep -v  ^$$\$); apptainer shell  --mount=src=/projects/0/jhssrf003/JHS_notebooks,dst=/projects/0/jhssrf003/JHS_notebooks --nv --no-mount hostfs --writable-tmpfs {qal_workshop_image_path}
   RequestTTY yes
 """
 
