@@ -634,9 +634,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </ol>
 <h3 id="setting-up-the-ssh-connection">Setting up the SSH Connection:<a class="headerlink" href="#setting-up-the-ssh-connection" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Download the Python script <a download="setup_remote.py" href="../resources/setup/setup_remote.py">setup_remote.py</a></li>
-<li>In the terminal, run <code>setup_remote.py gpu-name user-name</code>, the 
-   last two fields will be provided at the workshop.</li>
+<li>Download the Python script <a download="setup_remote.py" href="../resources/setup/setup_remote.py">setup_remote.py</a> 
+   and run <code>setup_remote user-name</code>.</li>
 <li>Install Remote Development Extension Pack (see image below).</li>
 </ol>
 <h3 id="connecting">Connecting:<a class="headerlink" href="#connecting" title="Permanent link">&para;</a></h3>
@@ -653,9 +652,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p><img alt="Remote Development Extension Pack" src="../resources/setup/remote-development-extension-pack.png" /></p>
 <h2 id="workshop-files">Workshop Files<a class="headerlink" href="#workshop-files" title="Permanent link">&para;</a></h2>
 <ol>
-<li>In the Visual Studio Code window, open a terminal.</li>
-<li>Create a folder named <code>qal_workshop</code> (e.g., by <code>mkdir qal_workshop</code>).</li>
-<li>Copy the files from the JHS Notebooks to the new folder: <code>cp -r ~/JHS_notebooks/qal_workshop ~/qal_workshop</code>.</li>
+<li>From the JHS Notebooks, copy the files inside the 
+   <code>qal_workshop</code> folder to the Apptainer: <code>cp -r 
+   ~/JHS_notebooks/qal_workshop ~/qal_workshop</code>.</li>
 </ol>
 <h2 id="building-the-project">Building the Project<a class="headerlink" href="#building-the-project" title="Permanent link">&para;</a></h2>
 <ol>
@@ -665,8 +664,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    Build</code>.</li>
 </ol>
 <h2 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h2>
-<p>To connect to the Classiq backend, run the authentication script 
-by executing the following command from the terminal: <code>JHS_notebooks/generate_access_token_for_cudaq</code>.</p>
+<ol>
+<li>Run the authentication script <code>export_classiq_token</code> located in 
+the <code>JHS_notebook</code> folder.</li>
+<li>Copy the token to a file <code>~/classiq_token.txt</code>.</li>
+</ol>
 
 
 
