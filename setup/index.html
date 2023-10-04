@@ -667,10 +667,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </ol>
 <h2 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h2>
 <p>We need the generated access token to call the Classiq API and run 
-the examples.
-Run the authentication script <code>export_classiq_token</code> located in 
-the <code>JHS_notebook</code> folder. Copy the token contents to 
-<code>~/classiq_token.txt</code>.</p>
+the examples.</p>
+<ol>
+<li>Option 1 - automatic: Run 
+   <code>JHS_notebooks/generate_access_token_for_cudaq.py</code>.<br />
+   Make sure the file <code>~/classiq_token.txt</code> has been created.</li>
+<li>Option 2 - manual: Run the authentication script 
+   <code>export_classiq_token</code> located in the <code>JHS_notebook</code> folder. 
+   Copy the token contents to <code>~/classiq_token.txt</code>.</li>
+</ol>
 
 
 
